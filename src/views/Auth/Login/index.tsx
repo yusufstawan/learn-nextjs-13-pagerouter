@@ -58,6 +58,17 @@ const LoginView = () => {
             {isLoading ? "Loading..." : "Login"}
           </button>
         </form>
+        <button
+          onClick={() =>
+            signIn("google", {
+              callbackUrl,
+              redirect: false,
+            })
+          }
+          className={styles.login__form__item__google}
+        >
+          Sign In With Google
+        </button>
       </div>
       <p className={styles.login__link}>
         Belum punya akun? registrasi <Link href={"/auth/register"}>disini</Link>
